@@ -16,7 +16,7 @@ class Producto:
         self.categoria = categoria 
 
     def __str__(self):
-        return f"Contacto con nombre: {self.nombre}, cantidad: {self.cantidad}, precio: {self.precio}, categoria: {self.categoria}"
+        return f"Producto con id: {self.id}, nombre: {self.nombre}, cantidad: {self.cantidad}, precio: {self.precio}, categoria: {self.categoria}"
 
     
     
