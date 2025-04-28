@@ -6,8 +6,7 @@ from mysql.connector import Error
 class Conexion:
     DATABASE = "almacen_db"
     USERNAME = "root"
-    PASSWORD = "algoSQL_05"
-    DB_PORT = "3366"
+    PASSWORD = "1234"
     HOST = "localhost"
     POOL_SIZE = 5
     POOL_NAME = "almacen_pool"

@@ -27,6 +27,10 @@
           <!-- Formulario -->
           <form action="/guardar" method="post" autocomplete="off">
             {{forma.csrf_token}}
+
+            <!-- Id oculto para editar -->
+            {{forma.id}}
+
             <!-- Nombre -->
             <div class="form-floating py-2">
               <!-- <input type="text" class="form-control" id="nombre" placeholder="Nombre"/>
