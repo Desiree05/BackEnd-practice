@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'core',
     'pages.apps.PagesConfig',
+    'profiles',
 ]
 
 MIDDLEWARE = [
@@ -127,5 +128,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Auth redirects
-LOGIN_REDIRECT_URL = 'pages:pages'
+#LOGIN_REDIRECT_URL = 'pages:pages'
 LOGOUT_REDIRECT_URL = 'home'
+
+# Emails
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+    EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+else:
+    # Configuración para producción
+    pass
+
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'

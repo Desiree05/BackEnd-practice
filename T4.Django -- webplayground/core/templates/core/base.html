@@ -44,13 +44,23 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'pages:pages' %}">Página</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'profiles:list' %}">Perfiles públicos</a>
+              </li>
             </ul>
             <ul class="navbar-nav">
               {% if not request.user.is_authenticated %}
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'login' %}">Acceder</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'signup' %}">Registro</a>
+                </li>
               {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'profile' %}">Perfil</a>
+                </li>
+
                 <li class="nav-item">
                   <form id="logout-form" method="post" action="{% url 'logout' %}">
                     {% csrf_token %}
